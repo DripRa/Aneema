@@ -1,4 +1,6 @@
 import Reveal from "@/components/Reveal";
+import Parallax from "@/components/Parallax";
+import PhoneMockup from "@/components/PhoneMockup";
 
 const SURVEY = "https://forms.cloud.microsoft/e/CydT3KQFYY";
 
@@ -104,12 +106,27 @@ export default function Home() {
               </Reveal>
             </div>
             <Reveal delay={220}>
-              <div className="relative">
-                <img
-                  src="/images/hero.jpg"
-                  alt="Zwei Menschen an einem ruhigen See zwischen hohen Pinien"
-                  className="w-full h-[clamp(300px,46vw,560px)] object-cover rounded-[6px]"
-                />
+              <div className="relative flex justify-center">
+                <div
+                  aria-hidden="true"
+                  className="absolute -inset-x-10 -inset-y-10 sm:-inset-x-14 sm:-inset-y-12 rounded-[28px] overflow-hidden"
+                >
+                  <img
+                    src="/images/hero.jpg"
+                    alt=""
+                    className="w-full h-full object-cover blur-[3px] scale-110"
+                  />
+                  <div
+                    className="absolute inset-0"
+                    style={{
+                      background:
+                        "linear-gradient(155deg, rgba(35,38,25,.2), rgba(35,38,25,.5))",
+                    }}
+                  />
+                </div>
+                <div className="relative animate-float">
+                  <PhoneMockup />
+                </div>
               </div>
             </Reveal>
           </div>
@@ -453,12 +470,14 @@ export default function Home() {
       <section className="py-[clamp(20px,4vw,44px)]">
         <div className="wrap">
           <Reveal>
-            <div className="relative overflow-hidden rounded-[6px]">
-              <img
-                src="/images/showcase.jpg"
-                alt="Ruhige Seenlandschaft mit Bergen und Zypressen im warmen Morgenlicht"
-                className="w-full h-[clamp(260px,42vw,520px)] object-cover"
-              />
+            <div className="relative overflow-hidden rounded-[6px] h-[clamp(260px,42vw,520px)]">
+              <Parallax max={22} className="absolute inset-x-0 -inset-y-[9%]">
+                <img
+                  src="/images/showcase.jpg"
+                  alt="Ruhige Seenlandschaft mit Bergen und Zypressen im warmen Morgenlicht"
+                  className="w-full h-full object-cover"
+                />
+              </Parallax>
               <div
                 className="absolute inset-0"
                 style={{
