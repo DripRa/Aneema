@@ -1,7 +1,6 @@
 import Reveal from "@/components/Reveal";
 
-const SURVEY =
-  "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=W6AlmlTaUKce3F0O1OOMISv9vIlZbRIpVbtVyI8TxNUQzNMNFROUkhYMzFYQVNRWFEyVlRBQ1ZLOS4u";
+const SURVEY = "https://forms.cloud.microsoft/e/CydT3KQFYY";
 
 function SurveyButton({ kind = "dark", label = "An der Umfrage teilnehmen" }) {
   return (
@@ -37,7 +36,7 @@ export default function Home() {
       {/* ===================== NAV ===================== */}
       <header
         className="sticky top-0 z-[100] backdrop-blur-md border-b border-line"
-        style={{ backgroundColor: "rgba(244,242,235,.8)" }}
+        style={{ backgroundColor: "rgba(240,233,216,.8)" }}
       >
         <div className="wrap flex items-center justify-between gap-[18px] py-[15px]">
           <a href="#top" aria-label="Aneema Startseite">
@@ -75,22 +74,6 @@ export default function Home() {
 
       {/* ===================== HERO ===================== */}
       <section className="relative overflow-hidden min-h-[88vh] flex flex-col justify-center py-[clamp(60px,9vw,110px)]">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute -top-44 -right-40 z-0 h-[min(720px,95vw)] w-[min(720px,95vw)] rounded-full blur-[20px] animate-breathe"
-          style={{
-            background:
-              "radial-gradient(circle at 40% 40%, rgba(170,200,196,.5), rgba(143,179,166,.18) 50%, transparent 72%)",
-          }}
-        />
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute -bottom-48 -left-36 z-0 h-[min(440px,70vw)] w-[min(440px,70vw)] rounded-full blur-[20px] animate-breathe [animation-delay:-5s]"
-          style={{
-            background:
-              "radial-gradient(circle, rgba(228,237,230,.7), transparent 70%)",
-          }}
-        />
         <div className="wrap relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -123,8 +106,8 @@ export default function Home() {
             <Reveal delay={220}>
               <div className="relative">
                 <img
-                  src="/images/hero.svg"
-                  alt="Ruhiger Sonnenaufgang über Hügeln (Platzhalterbild)"
+                  src="/images/hero.jpg"
+                  alt="Zwei Menschen an einem ruhigen See zwischen hohen Pinien"
                   className="w-full h-[clamp(300px,46vw,560px)] object-cover rounded-[6px]"
                 />
               </div>
@@ -135,7 +118,7 @@ export default function Home() {
               <span className="font-mono text-[0.8rem] tracking-[0.04em] text-ink3 inline-flex items-center gap-2.5">
                 <span
                   className="w-[7px] h-[7px] rounded-full bg-sage"
-                  style={{ boxShadow: "0 0 0 4px rgba(124,154,141,.18)" }}
+                  style={{ boxShadow: "0 0 0 4px rgba(139,145,104,.2)" }}
                 />
                 Für Android und iOS. Aktuell in Entwicklung.
               </span>
@@ -472,15 +455,15 @@ export default function Home() {
           <Reveal>
             <div className="relative overflow-hidden rounded-[6px]">
               <img
-                src="/images/calm.svg"
-                alt="Ruhige Landschaft am Morgen (Platzhalterbild)"
+                src="/images/showcase.jpg"
+                alt="Ruhige Seenlandschaft mit Bergen und Zypressen im warmen Morgenlicht"
                 className="w-full h-[clamp(260px,42vw,520px)] object-cover"
               />
               <div
                 className="absolute inset-0"
                 style={{
                   background:
-                    "linear-gradient(to top, rgba(22,35,30,.6), rgba(22,35,30,0) 60%)",
+                    "linear-gradient(to top, rgba(35,38,25,.62), rgba(35,38,25,0) 60%)",
                 }}
               />
               <p className="absolute left-0 bottom-0 p-[clamp(24px,4vw,52px)] font-serif text-paper leading-[1.05] text-[clamp(1.8rem,1.2rem+3vw,3.4rem)] max-w-[18ch]">
@@ -563,21 +546,21 @@ export default function Home() {
                 <SurveyButton kind="paper" />
                 <div className="mt-[26px] flex gap-[26px] justify-center flex-wrap font-mono text-[0.76rem] tracking-[0.04em] text-paper opacity-70">
                   <span className="inline-flex items-center gap-2.5">
-                    <svg className="w-[15px] h-[15px]" viewBox="0 0 24 24" fill="none" stroke="#9DBBB0" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <svg className="w-[15px] h-[15px]" viewBox="0 0 24 24" fill="none" stroke="#AEB489" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                       <circle cx="12" cy="12" r="9" />
                       <path d="M12 7v5l3 2" />
                     </svg>
                     Etwa 3 Minuten
                   </span>
                   <span className="inline-flex items-center gap-2.5">
-                    <svg className="w-[15px] h-[15px]" viewBox="0 0 24 24" fill="none" stroke="#9DBBB0" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <svg className="w-[15px] h-[15px]" viewBox="0 0 24 24" fill="none" stroke="#AEB489" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                       <rect x="5" y="11" width="14" height="9" rx="2" />
                       <path d="M8 11V8a4 4 0 0 1 8 0v3" />
                     </svg>
                     Anonym
                   </span>
                   <span className="inline-flex items-center gap-2.5">
-                    <svg className="w-[15px] h-[15px]" viewBox="0 0 24 24" fill="none" stroke="#9DBBB0" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <svg className="w-[15px] h-[15px]" viewBox="0 0 24 24" fill="none" stroke="#AEB489" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                       <path d="M20 6L9 17l-5-5" />
                     </svg>
                     Früher Zugang zum Launch
