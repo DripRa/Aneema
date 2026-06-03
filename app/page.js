@@ -1,8 +1,23 @@
 import Reveal from "@/components/Reveal";
 import Parallax from "@/components/Parallax";
 import PhoneMockup from "@/components/PhoneMockup";
+import FeatureCarousel from "@/components/FeatureCarousel";
 
 const SURVEY = "https://forms.cloud.microsoft/e/CydT3KQFYY";
+
+const features = [
+  { group: "Weniger von ihnen", title: "Schrumpfendes Zeitbudget", desc: "Dein tägliches Limit sinkt sanft Woche für Woche. Ab einem niedrigen Wert planst du feste Nutzungsfenster, statt jederzeit zu scrollen." },
+  { group: "Weniger von ihnen", title: "Verzögerung vor dem Öffnen", desc: "Ablenkende Apps öffnen nie sofort. Eine kurze Pause, optional eine kleine Denkaufgabe, durchbricht den automatischen Griff." },
+  { group: "Weniger von ihnen", title: "Bewusste Pausen", desc: "An den kritischsten Momenten, morgens und am Ende des Limits, hält eine ruhige Atempause den stärksten Impuls auf." },
+  { group: "Weniger von ihnen", title: "Vertrauensperson-Passwort", desc: "Wichtige Einstellungen schützt ein Passwort, das eine Person deines Vertrauens verwahrt. So bleibst du deinem Ziel treu." },
+  { group: "Weniger von ihnen", title: "Geräteübergreifende Sperre", desc: "Was auf dem Handy blockiert ist, ist es auch auf deinen anderen Geräten. Kein einfaches Ausweichen über den Browser." },
+  { group: "Weniger von ihnen", title: "Kontextbewusster Stillmodus", desc: "Beim Sport, draußen oder mit Freunden erkennt Aneema die Situation und reduziert Ablenkungen automatisch." },
+  { group: "Weniger von ihnen", title: "Eltern-Modus", desc: "Eltern begleiten ihre Kinder mit gemeinsamen Regeln und Wochenberichten. Unterstützung statt ständiger Überwachung." },
+  { group: "Mehr von dir", title: "Personalisierte Offline-Vorschläge", desc: "Statt Leere nach dem Weglegen bekommst du konkrete Aktivitäten, die zu deinen Interessen passen, von Kreativität bis Bewegung." },
+  { group: "Mehr von dir", title: "Bewusstsein für verpasste Momente", desc: "Aneema zeigt dir, was du gerade gewinnst, wenn du nicht scrollst. Neue Ideen, echte Gespräche, einfach Ruhe." },
+  { group: "Mehr von dir", title: "Fortschritt & Einblicke", badge: "Kostenlos", desc: "Wöchentliche, monatliche und jährliche Rückblicke zeigen dir, wie viel Zeit du zurückgewonnen hast. Sichtbar und motivierend." },
+  { group: "Mehr von dir", title: "Gemeinsame Fokus-Challenge", desc: "Startet zu zweit oder in der Gruppe eine Challenge, ohne euch gegenseitig abzulenken. Am Ende seht ihr euren Fortschritt." },
+];
 
 function SurveyButton({ kind = "dark", label = "An der Umfrage teilnehmen" }) {
   return (
@@ -26,15 +41,12 @@ function Brand() {
   return (
     <span className="leaf-logo flex items-center gap-2.5 font-serif text-[1.7rem] tracking-[0.01em]">
       <span className="flex-none inline-flex">
-        <svg width="36" height="36" viewBox="0 0 64 64" aria-hidden="true">
-          <line x1="32" y1="60" x2="32" y2="64" stroke="#38432A" strokeWidth="2" strokeLinecap="round" />
-          <g transform="translate(32 60)">
-            <path className="lf lf1" d={leaf} fill="#38432A" />
-            <path className="lf lf2" d={leaf} fill="#46532C" />
-            <path className="lf lf3" d={leaf} fill="#4F5F32" />
-            <path className="lf lf4" d={leaf} fill="#6E7C4A" />
-            <path className="lf lf5" d={leaf} fill="#8B9168" />
-          </g>
+        <svg width="49" height="28" viewBox="-35 -38 70 40" style={{ overflow: "visible" }} aria-hidden="true">
+          <path className="lf lf1" d={leaf} fill="#38432A" />
+          <path className="lf lf2" d={leaf} fill="#46532C" />
+          <path className="lf lf3" d={leaf} fill="#4F5F32" />
+          <path className="lf lf4" d={leaf} fill="#6E7C4A" />
+          <path className="lf lf5" d={leaf} fill="#8B9168" />
         </svg>
       </span>
       Aneema
@@ -273,6 +285,15 @@ export default function Home() {
             </div>
           </Reveal>
 
+          {/* Mobil: Feature-Wechsler */}
+          <div className="lg:hidden">
+            <Reveal>
+              <FeatureCarousel items={features} />
+            </Reveal>
+          </div>
+
+          {/* Desktop: vollständige Liste */}
+          <div className="hidden lg:block">
           {/* Gruppe 1 */}
           <Reveal>
             <div>
@@ -376,6 +397,7 @@ export default function Home() {
               </div>
             </div>
           </Reveal>
+          </div>
         </div>
       </section>
 

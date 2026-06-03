@@ -147,6 +147,19 @@ body::after {
     transform: translateY(-8px);
   }
 }
+.cf-in {
+  animation: cf-in 0.5s ease;
+}
+@keyframes cf-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
 
 /* FAQ accordion (native details/summary) */
 .faq details {
@@ -199,19 +212,19 @@ body::after {
   transition-delay: 0.12s;
 }
 .leaf-logo:hover .lf1 {
-  transform: rotate(-66deg);
+  transform: rotate(-56deg);
 }
 .leaf-logo:hover .lf2 {
-  transform: rotate(-33deg);
+  transform: rotate(-28deg);
 }
 .leaf-logo:hover .lf3 {
   transform: rotate(0deg);
 }
 .leaf-logo:hover .lf4 {
-  transform: rotate(33deg);
+  transform: rotate(28deg);
 }
 .leaf-logo:hover .lf5 {
-  transform: rotate(66deg);
+  transform: rotate(56deg);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -222,6 +235,9 @@ body::after {
   .animate-breathe,
   .animate-drop,
   .animate-float {
+    animation: none;
+  }
+  .cf-in {
     animation: none;
   }
   .leaf-logo .lf {
