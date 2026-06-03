@@ -22,10 +22,20 @@ function SurveyButton({ kind = "dark", label = "An der Umfrage teilnehmen" }) {
 }
 
 function Brand() {
+  const leaf = "M0 0 C 8 -9, 8 -27, 0 -36 C -8 -27, -8 -9, 0 0 Z";
   return (
-    <span className="flex items-center gap-3 font-serif text-[1.7rem] tracking-[0.01em]">
-      <span className="flex-none w-8 h-8 rounded-full bg-green inline-flex items-center justify-center">
-        <span className="font-serif text-paper text-[1.05rem] leading-none">A</span>
+    <span className="leaf-logo flex items-center gap-2.5 font-serif text-[1.7rem] tracking-[0.01em]">
+      <span className="flex-none inline-flex">
+        <svg width="36" height="36" viewBox="0 0 64 64" aria-hidden="true">
+          <line x1="32" y1="60" x2="32" y2="64" stroke="#38432A" strokeWidth="2" strokeLinecap="round" />
+          <g transform="translate(32 60)">
+            <path className="lf lf1" d={leaf} fill="#38432A" />
+            <path className="lf lf2" d={leaf} fill="#46532C" />
+            <path className="lf lf3" d={leaf} fill="#4F5F32" />
+            <path className="lf lf4" d={leaf} fill="#6E7C4A" />
+            <path className="lf lf5" d={leaf} fill="#8B9168" />
+          </g>
+        </svg>
       </span>
       Aneema
     </span>
@@ -75,10 +85,10 @@ export default function Home() {
       </header>
 
       {/* ===================== HERO ===================== */}
-      <section className="relative overflow-hidden min-h-[88vh] flex flex-col justify-center py-[clamp(60px,9vw,110px)]">
+      <section className="relative overflow-hidden lg:min-h-[88vh] flex flex-col lg:justify-center py-[clamp(44px,9vw,96px)]">
         <div className="wrap relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
+          <div className="grid lg:grid-cols-2 gap-y-12 lg:gap-x-24 items-center">
+            <div className="lg:pr-6">
               <Reveal>
                 <span className="kick mb-[30px]">Bewusster leben mit Aneema</span>
               </Reveal>
@@ -109,7 +119,7 @@ export default function Home() {
               <div className="relative flex justify-center">
                 <div
                   aria-hidden="true"
-                  className="absolute -inset-x-10 -inset-y-10 sm:-inset-x-14 sm:-inset-y-12 rounded-[28px] overflow-hidden"
+                  className="absolute -inset-x-8 -inset-y-6 sm:-inset-x-12 sm:-inset-y-8 rounded-[28px] overflow-hidden"
                 >
                   <img
                     src="/images/hero.jpg"
@@ -131,7 +141,7 @@ export default function Home() {
             </Reveal>
           </div>
           <Reveal delay={420}>
-            <div className="flex justify-between items-end gap-5 mt-[clamp(46px,8vw,90px)] flex-wrap">
+            <div className="flex justify-between items-end gap-5 mt-[clamp(28px,6vw,72px)] flex-wrap">
               <span className="font-mono text-[0.8rem] tracking-[0.04em] text-ink3 inline-flex items-center gap-2.5">
                 <span
                   className="w-[7px] h-[7px] rounded-full bg-sage"
@@ -655,13 +665,13 @@ export default function Home() {
               <h5 className="font-mono uppercase text-ink3 text-[0.72rem] tracking-[0.16em] mb-[18px]">
                 Rechtliches
               </h5>
-              <a className="block font-sans text-ink text-[0.97rem] mb-3 hover:pl-1.5 hover:text-green2 transition-all" href="#" rel="nofollow">
+              <a className="block font-sans text-ink text-[0.97rem] mb-3 hover:pl-1.5 hover:text-green2 transition-all" href="/impressum">
                 Impressum
               </a>
-              <a className="block font-sans text-ink text-[0.97rem] mb-3 hover:pl-1.5 hover:text-green2 transition-all" href="#" rel="nofollow">
+              <a className="block font-sans text-ink text-[0.97rem] mb-3 hover:pl-1.5 hover:text-green2 transition-all" href="/datenschutz">
                 Datenschutz
               </a>
-              <a className="block font-sans text-ink text-[0.97rem] mb-3 hover:pl-1.5 hover:text-green2 transition-all" href="#" rel="nofollow">
+              <a className="block font-sans text-ink text-[0.97rem] mb-3 hover:pl-1.5 hover:text-green2 transition-all" href="mailto:manta.raduwd@gmail.com">
                 Kontakt
               </a>
             </div>
